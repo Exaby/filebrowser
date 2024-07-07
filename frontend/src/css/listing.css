@@ -130,6 +130,11 @@ html[dir="rtl"] #listing {
   text-align: center;
 }
 
+#listing.mosaic.gallery .item[data-type="video"] div:last-of-type {
+  color: white;
+  background: linear-gradient(#0000, #0009);
+}
+
 #listing.mosaic.gallery .item[data-type="image"] div:last-of-type {
   color: white;
   background: linear-gradient(#0000, #0009);
