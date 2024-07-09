@@ -3,7 +3,8 @@ RUN apk --update add ca-certificates \
                      mailcap \
                      curl \
                      jq \
-                     ffmpeg
+                     ffmpeg \
+                     libc6-compat
 
 COPY healthcheck.sh /healthcheck.sh
 RUN chmod +x /healthcheck.sh  # Make the script executable

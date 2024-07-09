@@ -207,14 +207,15 @@ func createVideoThumbnail(file *files.FileInfo, previewSize PreviewSize, fileCac
 
 	log.Printf("Creating thumbnail for file: %s", file.Path)
 
-	exePath, err := os.Executable()
+	//exePath, err := os.Executable()
 	if err != nil {
 		log.Printf("Error getting executable path: %v", err)
 		return nil, err
 	}
-	exeDir := filepath.Dir(exePath)
+	//exeDir := filepath.Dir(exePath)
 
-	absPath := filepath.Join(exeDir, file.Path)
+	// replace  with /srv/ for docker
+	absPath := filepath.Join("/srv/", file.Path) //filepath.Join(exeDir, file.Path)
 
 	log.Printf("File path: %s, Absolute path: %s", file.Path, absPath)
 
